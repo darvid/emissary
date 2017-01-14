@@ -1,6 +1,6 @@
 # emissary: A TCP service multiplexer
 
-[![Coveralls](https://img.shields.io/coveralls/darvid/emissary.svg)](https://coveralls.io/github/darvid/emissary) [![Go Report Card](https://goreportcard.com/badge/github.com/darvid/emissary)](https://goreportcard.com/report/github.com/darvid/emissary) [![Travis](https://img.shields.io/travis/darvid/emissary.svg)](https://travis-ci.org/darvid/emissary)
+[![Coveralls](https://img.shields.io/coveralls/darvid/emissary.svg)](https://coveralls.io/github/darvid/emissary) [![Go Report Card](http://goreportcard.com/badge/github.com/darvid/emissary)](https://goreportcard.com/report/github.com/darvid/emissary) [![Travis](https://img.shields.io/travis/darvid/emissary.svg)](https://travis-ci.org/darvid/emissary)
 
 [![asciicast](https://asciinema.org/a/99252.png)](https://asciinema.org/a/99252)
 
@@ -10,6 +10,29 @@ bytes.
 
 Upstreams are configured through *upstream rules*, which are a simple
 regexp/remote address pair.
+
+## Installation
+
+### With go get
+
+```shell
+$ go get github.com/darvid/emissary
+```
+
+### Binaries
+
+The latest releases can be downloaded from
+[Github](https://github.com/darvid/emissary/releases).
+
+### From source
+
+```shell
+$ git clone https://github.com/darvid/emissary.git
+$ cd emissary
+# Requires Glide to be installed - https://glide.sh/
+$ glide install
+$ make build
+```
 
 ## Examples
 
