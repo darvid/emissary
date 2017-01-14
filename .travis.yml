@@ -1,0 +1,17 @@
+language: go
+sudo: false
+go:
+  - tip
+install:
+  - go get -v github.com/golang/lint/golint
+  - go get -v github.com/Masterminds/glide
+  - go get -v github.com/mattn/goveralls
+  - go get -v github.com/mitchellh/gox
+  - go get -v github.com/tcnksm/ghr
+script:
+  - glide install
+  - make test
+  - $HOME/gopath/bin/goveralls -service=travis-ci
+after_success:
+  - make build
+  - ghr --username darvid --token $GITHUB_TOKEN --replace $TRAVIS_TAG dist/

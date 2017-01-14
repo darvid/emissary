@@ -1,0 +1,3 @@
+package: github.com/darvid/emissary
+import:
+- package: github.com/golang/glog
