@@ -14,4 +14,4 @@ script:
   - $HOME/gopath/bin/goveralls -service=travis-ci
 after_success:
   - make build
-  - ghr --username darvid --token $GITHUB_TOKEN --replace $TRAVIS_TAG dist/
+  - if [[ -n $TRAVIS_TAG ]]; then ghr --username darvid --token $GITHUB_TOKEN --replace $TRAVIS_TAG dist/; fi
