@@ -7,7 +7,7 @@ GOX_LDFLAGS="-X main.version=$(TAG_NAME) -X main.buildTime=$(shell date -u +%Y-%
 default: build
 
 build: test
-	gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}" -ldflags $(GOX_LDFLAGS)
+	CGO_ENABLED=0 gox -output "dist/{{.OS}}_{{.Arch}}_{{.Dir}}" -ldflags $(GOX_LDFLAGS)
 
 install:
 	go install -ldflags $(GOX_LDFLAGS)
