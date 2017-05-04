@@ -78,5 +78,6 @@ A few projects exist that provide TCP service muxing. The ones mentioned below
 are libraries which require writing custom applications or scripts, which may be
 preferential to some, depending on the use case.
 
+* [Emissary](https://github.com/craSH/Emissary)
 * [node-port-mux](https://github.com/robertklep/node-port-mux)
 * [cmux](https://github.com/soheilhy/cmux)
